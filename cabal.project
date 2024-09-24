@@ -1,5 +1,0 @@
-packages:
-  json-alt
-  json-autotype
-  run-haskell-module
-allow-newer: aeson:th-abstraction aeson:ghc-prim aeson:all hashable:base

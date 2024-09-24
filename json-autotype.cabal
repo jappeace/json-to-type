@@ -117,7 +117,6 @@ library
     , data-default
     , filepath
     , hashable
-    , json-alt
     , lens
     , mtl
     , pretty
@@ -157,7 +156,6 @@ executable json-autotype
     , containers
     , filepath
     , hashable
-    , json-alt
     , json-autotype
     , lens
     , mtl
@@ -200,7 +198,6 @@ test-suite json-autotype-examples
     , directory
     , filepath
     , hashable
-    , json-alt
     , json-autotype
     , lens
     , mtl
@@ -244,7 +241,6 @@ test-suite json-autotype-gen-test
     , directory
     , filepath
     , hashable
-    , json-alt
     , json-autotype
     , lens
     , mtl
@@ -286,7 +282,6 @@ test-suite json-autotype-qc-test
     , containers
     , filepath
     , hashable
-    , json-alt
     , json-autotype
     , lens
     , mtl
