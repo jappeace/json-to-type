@@ -5,7 +5,7 @@ cabal-version: 3.0
 -- see: https://github.com/sol/hpack
 
 name:                json-to-type
-version:             3.1.2
+version:             4.0.0
 synopsis:            Automatic type declaration for JSON input data
 description:         Generates datatype declarations with Aeson''s ''Data.Aeson.FromJSON''
                      .
