@@ -37,7 +37,7 @@ import qualified Data.Yaml as Yaml
 
 import           Options.Applicative
 import           CommonCLI
-import           Paths_json_autotype
+import           Paths_json_to_type
 
 -- * Command line flags
 data Options = Options {
@@ -191,4 +191,4 @@ main = do opts <- execParser optInfo
     optInfo = info (optParser <**> helper)
             (  fullDesc
             <> progDesc "Parser JSON or YAML, get its type, and generate appropriate parser."
-            <> header "json-autotype -- automatic type and parser generation from JSON")
+            <> header "json-to-type -- automatic type and parser generation from JSON")

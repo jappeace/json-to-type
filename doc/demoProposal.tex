@@ -24,7 +24,7 @@ JSON is a subset of JavaScript, and convenient and ubiquitous data format for We
 
 Since Haskell excels in precise description of such complex systems, it enjoys relatively large set of parsing, validation, and web libraries.
 
-JSON-Autotype facilitates automatic creation of Web API interfaces in Haskell. It uses union typing for ad-hoc type discovery.
+Json-To-Type facilitates automatic creation of Web API interfaces in Haskell. It uses union typing for ad-hoc type discovery.
 
 I will introduce problem by examples, and discuss most frequent problems of type-based interface ,,discovery''.
 
@@ -41,7 +41,7 @@ The simplest example would be a single JSON document:
                    "hexValue":"#00f" }] }
 \end{verbatim}
 
-When fed to JSON-autotype tool by running \begin{verbatim}json-autotype color.json -o Color.hs\end{verbatim} we get a simple type declaration along with instances of Aeson's \texttt{ToJSON} and \texttt{FromJSON} classes:
+When fed to json-to-type tool by running \begin{verbatim}json-to-type color.json -o Color.hs\end{verbatim} we get a simple type declaration along with instances of Aeson's \texttt{ToJSON} and \texttt{FromJSON} classes:
 
 \begin{verbatim}
 data TopLevel = TopLevel                    {
@@ -51,11 +51,11 @@ data ColorsArrayElt = ColorsArrayElt {
     colorsArrayEltColorName :: Text  }
 \end{verbatim}
 
-After explaining the output of this example, I will proceed by demonstrating use of JSON-autotype to:
+After explaining the output of this example, I will proceed by demonstrating use of json-to-type to:
 \begin{enumerate}
 \item Treat ambiguous types.
 \item Automatically detect and unify type aliases.
-\item Define custom types to be recognized by JSON-Autotype.
+\item Define custom types to be recognized by Json-To-Type.
 \item Implement a sample endpoint of Facebook query API.
 \item Reconstruct full algebraic types of dependent records. \timePermits{}
 \item Use in conjuction with \emph{wget} in order to reconstruct consistent types for API with multiple endpoints.

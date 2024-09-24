@@ -169,4 +169,4 @@ main = do opts <- execParser optInfo
       optInfo = info (optParser <**> helper)
         ( fullDesc
        <> progDesc "Generate a number of JSON test files, and generate type and parser for each."
-       <> header   "Self-test for json-autotype" )
+       <> header   "Self-test for json-to-type" )

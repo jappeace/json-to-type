@@ -1,32 +1,23 @@
-json-autotype
+json-to-type
 =============
+Fork of [json-autotype](https://github.com/migamake/json-autotype).
+It just builds and such.
+
 Takes a JSON format input, and generates automatic Haskell type declarations.
 
 Parser and printer instances are derived using [Aeson](http://hackage.haskell.org/package/aeson).
 
 The program uses union type unification to trim output declarations. The types of same attribute tag and similar attribute set, are automatically unified using recognition by attribute set matching. (This option can be optionally turned off, or a set of unified types may be given explicitly.) `:|:` alternatives (similar to `Either`) are used to assure that all `JSON` inputs seen in example input file are handled correctly.
 
-I should probably write a short paper to explain the methodology.
-
-[![Release build](https://gitlab.com/migamake/json-autotype/badges/master/pipeline.svg)](https://gitlab.com/migamake/json-autotype/commits/master)
-[![Hackage](https://img.shields.io/hackage/v/json-autotype.svg)](https://hackage.haskell.org/package/json-autotype)
-[![Hackage Dependencies](https://img.shields.io/hackage-deps/v/json-autotype.svg?style=flat)](http://packdeps.haskellers.com/feed?needle=json-autotype)
-[![Docker Automated build](https://img.shields.io/docker/automated/migamake/json-autotype.svg)](https://hub.docker.com/r/migamake/json-autotype/)
-[![Docker image size](https://img.shields.io/microbadger/image-size/migamake/json-autotype.svg)](https://hub.docker.com/r/migamake/json-autotype/)
-
-Details on official releases are on [Hackage](https://hackage.haskell.org/package/json-autotype)
+Details on official releases are on [Hackage](https://hackage.haskell.org/package/json-to-type)
 We currently support code generation to [Haskell](https://www.haskell.org), and [Elm](https://elm-lang.org).
-
-_Please [volunteer help](https://gitter.im/dataHaskell/json-autotype) or [provide financial support](https://paypal.me/MichalJan), if you want your favourite language supported too!_
-Expression of interest in particular feature may be filed as [GitHub issue](https://github.com/mgajda/json-autotype/issues/new).
-
 
 USAGE:
 ======
-After installing with `cabal install json-autotype`, you might generate stub code for the parser:
+After installing with `cabal install json-to-type`, you might generate stub code for the parser:
 
 ```
-    json-autotype input1.json ... inputN.json -o MyFormat.hs
+    json-to-type input1.json ... inputN.json -o MyFormat.hs
 ```
 
 Then you might test the parser by running it on an input file:
@@ -36,7 +27,7 @@ Then you might test the parser by running it on an input file:
 ```
 
 At this point you may see data structure generated automatically for you.
-The more input files you give to the inference engine `json-autotype`,
+The more input files you give to the inference engine `json-to-type`,
 the more precise type description will be.
 
 Algorithm will also suggest which types look similar, based on a set of attribute names,
@@ -45,14 +36,14 @@ and unify them unless specifically instructed otherwise.
 The goal of this program is to make it easy for users of big JSON APIs to generate entries from
 example data.
 
-Occasionally you might find a valid JSON for which `json-autotype` doesn't generate a correct parser.
+Occasionally you might find a valid JSON for which `json-to-type` doesn't generate a correct parser.
 You may either edit the resulting file _and_ send it to the author as a test case for future release.
 
 Patches and suggestions are welcome.
 
-You can run [with Docker](https://hub.docker.com/r/migamake/json-autotype/):
+You can run [with Docker](https://hub.docker.com/r/migamake/json-to-type/):
 ```
-docker run -it migamake/json-autotype
+docker run -it migamake/json-to-type
 ```
 
 EXAMPLES:
@@ -120,19 +111,19 @@ It will produce quite intuitive result (plus extra parentheses, and class deriva
       }
 ```
 
-Real-world use case examples are provided in the package [source repository](https://github.com/mgajda/json-autotype/tree/master/test).
+Real-world use case examples are provided in the package [source repository](https://github.com/mgajda/json-to-type/tree/master/test).
 
 Methodology:
 ============
-1. JSON-Autotype uses its own [union type system](https://github.com/mgajda/json-autotype/blob/master/Data/Aeson/AutoType/Type.hs) to derive types from JSON documents as the first step.
+1. Json-To-Type uses its own [union type system](https://github.com/mgajda/json-to-type/blob/master/Data/Aeson/AutoType/Type.hs) to derive types from JSON documents as the first step.
 2. Then it finds all those records that have 90% of the same key names, and suggest them as similar enough to merit treating as instances of the same type. (Note that this is optional, and can be tuned manually.)
 3. Last step is to derive unique-ish type names - we currently do it by concatenating the name of the container and name of the key. (Please open PR, if you want something fancy about that - initial version used just key name, when it was unique.)
 4. Finally it generates [Haskell](https://www.haskell.org/) or [Elm](http://elm-lang.org/) code for the type.
 
-Combination of robust [*union type system*](https://github.com/mgajda/json-autotype/blob/master/Data/Aeson/AutoType/Type.hs), and heuristic makes this system extremely reliable.
+Combination of robust [*union type system*](https://github.com/mgajda/json-to-type/blob/master/Data/Aeson/AutoType/Type.hs), and heuristic makes this system extremely reliable.
 Main test is QuickCheck-based generation of random JSON documents, and checking that they are all correctly parsed by resulting parser.
 
-More details are described in [Haskell.SG meetup presentation](https://engineers.sg/video/json-autotype-1-0-haskell-sg--429).
+More details are described in [Haskell.SG meetup presentation](https://engineers.sg/video/json-to-type-1-0-haskell-sg--429).
 
 Other approaches:
 =================

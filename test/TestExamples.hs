@@ -78,7 +78,7 @@ runAutotype source arguments = do
                      | isStack                      = ("stack",   ["run", source, "--"])
                      | isCabal                      = ("cabal",   ["run", source, "--"])
                      | otherwise                    = error "This test must be run either in either Stack or Cabal environment."
-    putStrLn $ concat ["Running json-autotype with executable ", show exec, " and arguments ", show args]
+    putStrLn $ concat ["Running json-to-type with executable ", show exec, " and arguments ", show args]
     rawSystem exec $ args ++ arguments
 
 verifyAesonOperators :: IO ()

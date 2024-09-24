@@ -1,7 +1,7 @@
 Changelog
 =========
     4.0.0  Mar 2022
-        * fork from json-autotype, merge json-alt. rename json-to-type.
+        * fork from json-to-type, merge json-alt. rename json-to-type.
           delete stack. add flake.
 
       

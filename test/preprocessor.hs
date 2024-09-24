@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -F -pgmFjson-autotype -optF--preprocessor #-}
+{-# OPTIONS_GHC -F -pgmFjson-to-type -optF--preprocessor #-}
 {
     "colorsArray":[{
             "colorName":"red",

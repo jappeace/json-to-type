@@ -1,5 +1,5 @@
 -- | QuickCheck instances for automatically generating JSON inputs,
--- and checking that json-autotype works correctly on these.
+-- and checking that json-to-type works correctly on these.
 module Main(
     main
   ) where

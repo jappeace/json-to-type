@@ -1,10 +1,10 @@
-cabal-version: 1.12
+cabal-version: 3.0
 
 -- This file has been generated from package.yaml by hpack version 0.35.2.
 --
 -- see: https://github.com/sol/hpack
 
-name:                json-autotype
+name:                json-to-type
 version:             3.1.2
 synopsis:            Automatic type declaration for JSON input data
 description:         Generates datatype declarations with Aeson''s ''Data.Aeson.FromJSON''
@@ -14,12 +14,12 @@ description:         Generates datatype declarations with Aeson''s ''Data.Aeson.
                      .
                      To get started you need to install the package,
                      .
-                     and run @json-autotype@ binary on an input @.json@ file.
+                     and run @json-to-type@ binary on an input @.json@ file.
                      .
                      That will generate a new Aeson-based JSON parser.
                      .
                      .
-                     > $ json-autotype input.json -o JSONTypes.hs
+                     > $ json-to-type input.json -o JSONTypes.hs
                      .
                      .
                      Feel free to tweak the by changing types of the fields
@@ -43,10 +43,10 @@ description:         Generates datatype declarations with Aeson''s ''Data.Aeson.
                      name your price and mail the author.)
                      .
                      .
-                     See introduction on <https://github.com/mgajda/json-autotype> for details.'
+                     See introduction on <https://github.com/mgajda/json-to-type> for details.'
                      .
-homepage:            https://github.com/mgajda/json-autotype.git#readme
-license:             BSD3
+homepage:            https://github.com/mgajda/json-to-type.git#readme
+license:             BSD-3-Clause
 license-file:        LICENSE
 stability:           stable
 author:              Michal J. Gajda
@@ -69,13 +69,13 @@ extra-source-files:
     test/facebook.json
     test/iPhoneMenu.json
     test/productsdb.json
-bug-reports:         https://github.com/mgajda/json-autotype.git/issues
+bug-reports:         https://github.com/mgajda/json-to-type.git/issues
 tested-with:
     GHC==8.0.2 GHC==8.2.2 GHC==8.4.4 GHC==8.6.5 GHC==8.8.2 GHC==8.10.1
 
 source-repository head
   type: git
-  location: https://github.com/mgajda/json-autotype.git
+  location: https://github.com/mgajda/json-to-type.git
 
 library
   exposed-modules:
@@ -96,7 +96,7 @@ library
   other-modules:
       Data.Aeson.AutoType.CodeGen.Common
       Data.Aeson.AutoType.Plugin.Subtype
-      Paths_json_autotype
+      Paths_json_to_type
   hs-source-dirs:
       src
   other-extensions:
@@ -131,14 +131,14 @@ library
     , vector
   default-language: Haskell2010
 
-executable json-autotype
+executable json-to-type
   main-is: GenerateJSONParser.hs
   hs-source-dirs:
       app
       common
   other-modules:
       CommonCLI
-      Paths_json_autotype
+      Paths_json_to_type
   other-extensions:
       TemplateHaskell
       ScopedTypeVariables
@@ -156,7 +156,7 @@ executable json-autotype
     , containers
     , filepath
     , hashable
-    , json-autotype
+    , json-to-type
     , lens
     , mtl
     , optparse-applicative
@@ -171,12 +171,12 @@ executable json-autotype
     , yaml
   default-language: Haskell2010
 
-test-suite json-autotype-examples
+test-suite json-to-type-examples
   type: exitcode-stdio-1.0
   main-is: TestExamples.hs
   other-modules:
       CommonCLI
-      Paths_json_autotype
+      Paths_json_to_type
   hs-source-dirs:
       test
       common
@@ -198,7 +198,7 @@ test-suite json-autotype-examples
     , directory
     , filepath
     , hashable
-    , json-autotype
+    , json-to-type
     , lens
     , mtl
     , optparse-applicative
@@ -213,7 +213,7 @@ test-suite json-autotype-examples
     , vector
   default-language: Haskell2010
 
-test-suite json-autotype-gen-test
+test-suite json-to-type-gen-test
   type: exitcode-stdio-1.0
   main-is: GenerateTestJSON.hs
   hs-source-dirs:
@@ -221,7 +221,7 @@ test-suite json-autotype-gen-test
       common
   other-modules:
       CommonCLI
-      Paths_json_autotype
+      Paths_json_to_type
   other-extensions:
       TemplateHaskell
       ScopedTypeVariables
@@ -241,7 +241,7 @@ test-suite json-autotype-gen-test
     , directory
     , filepath
     , hashable
-    , json-autotype
+    , json-to-type
     , lens
     , mtl
     , optparse-applicative
@@ -256,12 +256,12 @@ test-suite json-autotype-gen-test
     , vector
   default-language: Haskell2010
 
-test-suite json-autotype-qc-test
+test-suite json-to-type-qc-test
   type: exitcode-stdio-1.0
   main-is: TestQC.hs
   other-modules:
       CommonCLI
-      Paths_json_autotype
+      Paths_json_to_type
   hs-source-dirs:
       test/qc
       common
@@ -282,7 +282,7 @@ test-suite json-autotype-qc-test
     , containers
     , filepath
     , hashable
-    , json-autotype
+    , json-to-type
     , lens
     , mtl
     , optparse-applicative
