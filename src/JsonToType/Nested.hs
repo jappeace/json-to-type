@@ -16,7 +16,7 @@
 --   generated types in order to avoid name conflicts.
 --
 --   NOTE: this interface is yet unstable
-module Data.Aeson.AutoType.Nested(
+module JsonToType.Nested(
     defaultImportedModules
   , generateModuleImports
   , inferType
@@ -28,10 +28,10 @@ module Data.Aeson.AutoType.Nested(
   ) where
 
 import Data.Aeson
-import Data.Aeson.AutoType.CodeGen.Haskell(generateModuleImports, requiredPackages, importedModules, ModuleImport)
-import Data.Aeson.AutoType.CodeGen.HaskellFormat(displaySplitTypes)
-import Data.Aeson.AutoType.Extract(extractType, unifyTypes)
-import Data.Aeson.AutoType.Split(splitTypeByLabel)
+import JsonToType.CodeGen.Haskell(generateModuleImports, requiredPackages, importedModules, ModuleImport)
+import JsonToType.CodeGen.HaskellFormat(displaySplitTypes)
+import JsonToType.Extract(extractType, unifyTypes)
+import JsonToType.Split(splitTypeByLabel)
 import Data.Default
 import Data.Typeable
 import Data.Text(Text)

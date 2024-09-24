@@ -1,7 +1,7 @@
 {-# LANGUAGE TypeOperators #-}
 -- | This module defines data type (a :|: b) that behaves all like @Either@,
 -- except that has no tag in JSON representation as used by @FromJSON@ and @ToJSON@.
-module Data.Aeson.AutoType.Alternative(
+module JsonToType.Alternative(
     (:|:)(..)
   , toEither, fromEither
   , alt

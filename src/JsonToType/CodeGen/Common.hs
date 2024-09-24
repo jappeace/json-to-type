@@ -1,4 +1,4 @@
-module Data.Aeson.AutoType.CodeGen.Common(writeRunningCommandComment) where
+module JsonToType.CodeGen.Common(writeRunningCommandComment) where
 
 import System.Environment(getArgs, getProgName)
 import System.IO

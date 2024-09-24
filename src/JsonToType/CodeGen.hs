@@ -1,7 +1,7 @@
 {-# LANGUAGE CPP               #-}
 {-# LANGUAGE OverloadedStrings #-}
 -- | Code generation and test running in different languages. (Switchbox.)
-module Data.Aeson.AutoType.CodeGen(
+module JsonToType.CodeGen(
     Lang(..)
   , writeModule
   , runModule
@@ -10,11 +10,11 @@ module Data.Aeson.AutoType.CodeGen(
 
 import           Data.Text(Text)
 import qualified Data.HashMap.Strict as Map
-import           Data.Aeson.AutoType.Type
+import           JsonToType.Type
 import           System.Exit
 
-import           Data.Aeson.AutoType.CodeGen.Haskell
-import           Data.Aeson.AutoType.CodeGen.Elm
+import           JsonToType.CodeGen.Haskell
+import           JsonToType.CodeGen.Elm
 
 -- | Available output languages.
 data Lang = Haskell

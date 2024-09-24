@@ -6,8 +6,8 @@ module Main(
 
 import           Control.Monad
 import           Data.Aeson
-import           Data.Aeson.AutoType.Extract
-import           Data.Aeson.AutoType.Test() -- Arbitrary instance for Value
+import           JsonToType.Extract
+import           JsonToType.Test() -- Arbitrary instance for Value
 
 import           Test.QuickCheck
 --import           Test.QuickCheck.Parallel

@@ -32,14 +32,14 @@ import           Data.Scientific           (scientific, Scientific)
 import           Text.PrettyPrint.GenericPretty (pretty)
 import           Test.QuickCheck
 
-import           Data.Aeson.AutoType.CodeGen(writeModule, runModule, Lang(..))
-import           Data.Aeson.AutoType.Extract
-import           Data.Aeson.AutoType.Format
-import           Data.Aeson.AutoType.Pretty
-import           Data.Aeson.AutoType.Split
-import           Data.Aeson.AutoType.Test
-import           Data.Aeson.AutoType.Type
-import           Data.Aeson.AutoType.Util
+import           JsonToType.CodeGen(writeModule, runModule, Lang(..))
+import           JsonToType.Extract
+import           JsonToType.Format
+import           JsonToType.Pretty
+import           JsonToType.Split
+import           JsonToType.Test
+import           JsonToType.Type
+import           JsonToType.Util
 import           Options.Applicative
 
 import           CommonCLI

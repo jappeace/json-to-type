@@ -11,7 +11,7 @@ import System.FilePath((</>), (<.>), takeBaseName, replaceFileName)
 import System.Exit(ExitCode(..))
 import System.Environment as Env
 import System.Process             (rawSystem)
-import Data.Aeson.AutoType.CodeGen(runModule, Lang(Haskell))
+import JsonToType.CodeGen(runModule, Lang(Haskell))
 import Data.Aeson ( Result,  Object, FromJSON, Value(Null,Number), (.:?) )
 import qualified Data.Aeson.KeyMap as KM
 import Data.Aeson.Key (fromString, fromText)

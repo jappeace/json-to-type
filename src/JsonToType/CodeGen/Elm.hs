@@ -1,7 +1,7 @@
 {-# LANGUAGE CPP               #-}
 {-# LANGUAGE OverloadedStrings #-}
 -- | Wrappers for generating prologue and epilogue code in Haskell.
-module Data.Aeson.AutoType.CodeGen.Elm(
+module JsonToType.CodeGen.Elm(
     defaultElmFilename
   , writeElmModule
   , runElmModule
@@ -19,10 +19,10 @@ import           System.IO
 import           System.Process                 (system)
 import           System.Exit                    (ExitCode)
 
-import           Data.Aeson.AutoType.Format
-import           Data.Aeson.AutoType.Type
-import           Data.Aeson.AutoType.Util
-import           Data.Aeson.AutoType.CodeGen.ElmFormat
+import           JsonToType.Format
+import           JsonToType.Type
+import           JsonToType.Util
+import           JsonToType.CodeGen.ElmFormat
 
 import Debug.Trace(trace)
 

@@ -1,6 +1,6 @@
 {-# LANGUAGE TemplateHaskell #-}
 {-# LANGUAGE QuasiQuotes     #-}
-module Data.Aeson.AutoType.CodeGen.Generic(src) where
+module JsonToType.CodeGen.Generic(src) where
 
 import Language.Haskell.TH
 import Language.Haskell.TH.Quote

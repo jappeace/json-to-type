@@ -14,7 +14,7 @@ import qualified Data.ByteString.Lazy.Char8 as BSL
 import           System.Environment (getArgs)
 import           Control.Monad      (forM_, mzero, join)
 import           Control.Applicative
-import           Data.Aeson.AutoType.Alternative
+import           JsonToType.Alternative
 import           Data.Aeson(eitherDecode, Value(..), FromJSON(..), ToJSON(..),
                             pairs,
                             (.:), (.:?), (.=), object)

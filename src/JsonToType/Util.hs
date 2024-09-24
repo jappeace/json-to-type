@@ -1,7 +1,7 @@
 {-# OPTIONS_GHC -fno-warn-orphans #-}
 
 -- | Utility functions that may be ultimately moved to some library.
-module Data.Aeson.AutoType.Util( withFileOrHandle
+module JsonToType.Util( withFileOrHandle
                                , withFileOrDefaultHandle
                                ) where
 

@@ -1,5 +1,5 @@
 -- | Extraction and unification of AutoType's @Type@ from Aeson @Value@.
-module Data.Aeson.AutoType.Extract(valueSize, valueTypeSize,
+module JsonToType.Extract(valueSize, valueTypeSize,
                                    valueDepth, Dict(..),
                                    Type(..), emptyType,
                                    extractType, unifyTypes,
@@ -9,7 +9,7 @@ import           Control.Arrow ((&&&))
 import           Control.Exception               (assert)
 import           Data.Aeson.Key                  (toText)
 import           Data.Aeson.KeyMap               (toHashMap)
-import           Data.Aeson.AutoType.Type
+import           JsonToType.Type
 import qualified Data.Graph          as Graph
 import qualified Data.HashMap.Strict      as Map
 import           Data.HashMap.Strict             (HashMap, mapKeys)

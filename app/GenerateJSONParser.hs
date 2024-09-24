@@ -26,13 +26,13 @@ import           Data.Text                      (Text)
 import           Text.PrettyPrint.GenericPretty (pretty)
 import           Data.Version(showVersion)
 
-import           Data.Aeson.AutoType.CodeGen
-import           Data.Aeson.AutoType.Extract
-import           Data.Aeson.AutoType.Format
-import           Data.Aeson.AutoType.Split
-import           Data.Aeson.AutoType.Type
-import           Data.Aeson.AutoType.Util
-import           Data.Aeson.AutoType.Pretty
+import           JsonToType.CodeGen
+import           JsonToType.Extract
+import           JsonToType.Format
+import           JsonToType.Split
+import           JsonToType.Type
+import           JsonToType.Util
+import           JsonToType.Pretty
 import qualified Data.Yaml as Yaml
 
 import           Options.Applicative

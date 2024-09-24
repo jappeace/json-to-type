@@ -79,23 +79,24 @@ source-repository head
 
 library
   exposed-modules:
-      Data.Aeson.AutoType.CodeGen
-      Data.Aeson.AutoType.Extract
-      Data.Aeson.AutoType.Format
-      Data.Aeson.AutoType.CodeGen.Haskell
-      Data.Aeson.AutoType.CodeGen.HaskellFormat
-      Data.Aeson.AutoType.CodeGen.Generic
-      Data.Aeson.AutoType.CodeGen.Elm
-      Data.Aeson.AutoType.CodeGen.ElmFormat
-      Data.Aeson.AutoType.Split
-      Data.Aeson.AutoType.Type
-      Data.Aeson.AutoType.Test
-      Data.Aeson.AutoType.Util
-      Data.Aeson.AutoType.Nested
-      Data.Aeson.AutoType.Pretty
+      JsonToType.CodeGen
+      JsonToType.Extract
+      JsonToType.Alternative
+      JsonToType.Format
+      JsonToType.CodeGen.Haskell
+      JsonToType.CodeGen.HaskellFormat
+      JsonToType.CodeGen.Generic
+      JsonToType.CodeGen.Elm
+      JsonToType.CodeGen.ElmFormat
+      JsonToType.Split
+      JsonToType.Type
+      JsonToType.Test
+      JsonToType.Util
+      JsonToType.Nested
+      JsonToType.Pretty
   other-modules:
-      Data.Aeson.AutoType.CodeGen.Common
-      Data.Aeson.AutoType.Plugin.Subtype
+      JsonToType.CodeGen.Common
+      JsonToType.Plugin.Subtype
       Paths_json_to_type
   autogen-modules:
       Paths_json_to_type

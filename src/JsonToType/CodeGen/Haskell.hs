@@ -3,7 +3,7 @@
 {-# LANGUAGE QuasiQuotes       #-}
 {-# LANGUAGE OverloadedStrings #-}
 -- | Wrappers for generating prologue and epilogue code in Haskell.
-module Data.Aeson.AutoType.CodeGen.Haskell(
+module JsonToType.CodeGen.Haskell(
     writeHaskellModule
   , runHaskellModule
   , runHaskellModuleStrict
@@ -28,11 +28,11 @@ import           System.Process                 (system)
 import qualified System.Environment             (lookupEnv)
 import           System.Exit                    (ExitCode)
 
-import           Data.Aeson.AutoType.Format
-import           Data.Aeson.AutoType.Type
-import           Data.Aeson.AutoType.CodeGen.Generic(src)
-import           Data.Aeson.AutoType.CodeGen.HaskellFormat
-import           Data.Aeson.AutoType.Util
+import           JsonToType.Format
+import           JsonToType.Type
+import           JsonToType.CodeGen.Generic(src)
+import           JsonToType.CodeGen.HaskellFormat
+import           JsonToType.Util
 
 import qualified Language.Haskell.RunHaskellModule as Run
 
@@ -77,7 +77,7 @@ importedModules = [
   , "          System.Environment (getArgs)"
   , "          Control.Monad      (forM_, mzero, join)"
   , "          Control.Applicative"
-  , "          Data.Aeson.AutoType.Alternative"
+  , "          JsonToType.Alternative"
   , "          Data.Aeson(eitherDecode, Value(..), FromJSON(..), ToJSON(..),pairs,(.:), (.:?), (.=), object)"
   , "          Data.Monoid((<>))"
   , "          Data.Text (Text)"

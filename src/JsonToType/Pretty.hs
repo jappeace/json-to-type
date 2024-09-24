@@ -8,13 +8,13 @@
 
 -- | Instances of @Text.PrettyPrint.Out@ class to visualize
 -- Aeson @Value@ data structure.
-module Data.Aeson.AutoType.Pretty() where
+module JsonToType.Pretty() where
 
 import qualified Data.HashMap.Strict as Hash
 import           Data.HashMap.Strict(HashMap)
 import           Data.Aeson
 import qualified Data.Aeson.KeyMap          as KM
-import           Data.Aeson.AutoType.Type  (Dict(..), Type)
+import           JsonToType.Type  (Dict(..), Type)
 import qualified Data.Text                  as Text
 import           Data.Text                 (Text)
 import           Data.Set                   as Set(Set, toList)

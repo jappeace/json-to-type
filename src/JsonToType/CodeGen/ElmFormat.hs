@@ -6,7 +6,7 @@
 {-# LANGuaGE DeriveGeneric       #-}
 {-# LANGuaGE FlexibleContexts    #-}
 -- | Formatting type declarations and class instances for inferred types.
-module Data.Aeson.AutoType.CodeGen.ElmFormat(
+module JsonToType.CodeGen.ElmFormat(
   displaySplitTypes,
   normalizeTypeName) where
 
@@ -28,11 +28,11 @@ import           Control.Monad.State.Class
 import           Control.Monad.State.Strict(State, runState)
 import           GHC.Generics              (Generic)
 
-import           Data.Aeson.AutoType.Type
-import           Data.Aeson.AutoType.Extract
-import           Data.Aeson.AutoType.Split
-import           Data.Aeson.AutoType.Format
-import           Data.Aeson.AutoType.Util  ()
+import           JsonToType.Type
+import           JsonToType.Extract
+import           JsonToType.Split
+import           JsonToType.Format
+import           JsonToType.Util  ()
 
 --import           Debug.Trace -- DEBUG
 trace _ x = x

@@ -1,7 +1,7 @@
 {-# LANGUAGE FlexibleInstances     #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
 -- | Arbitrary instances for the JSON @Value@.
-module Data.Aeson.AutoType.Test (
+module JsonToType.Test (
   arbitraryTopValue
   ) where
 

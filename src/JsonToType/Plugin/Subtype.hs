@@ -1,10 +1,10 @@
 -- | API to which @SubtypePlugin@s should conform.
-module Data.Aeson.AutoType.Plugin.Subtype (
+module JsonToType.Plugin.Subtype (
     SubtypePlugin (..)
   , SubtypeDesc   (..)
   ) where
 
-import Data.Aeson.AutoType.Type
+import JsonToType.Type
 import Data.Aeson
 import Data.Dynamic
 

@@ -7,7 +7,7 @@ import           System.Process                 (system)
 import qualified System.Environment             (lookupEnv)
 import           System.Exit                    (ExitCode)
 
-import           Data.Aeson.AutoType.CodeGen    (Lang(..))
+import           JsonToType.CodeGen    (Lang(..))
 
 data TypeOpts = TyOptions {
                   autounify :: Bool

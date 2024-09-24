@@ -6,7 +6,7 @@
 {-# LANGuaGE DeriveGeneric       #-}
 {-# LANGuaGE FlexibleContexts    #-}
 -- | Formatting type declarations and class instances for inferred types. 
-module Data.Aeson.AutoType.Split(
+module JsonToType.Split(
   splitTypeByLabel, unificationCandidates,
   unifyCandidates, toposort
 ) where
@@ -30,9 +30,9 @@ import           Control.Monad.State.Strict(State, runState)
 import qualified Data.Graph          as Graph
 import           GHC.Generics              (Generic)
 
-import           Data.Aeson.AutoType.Type
-import           Data.Aeson.AutoType.Extract
-import           Data.Aeson.AutoType.Util  ()
+import           JsonToType.Type
+import           JsonToType.Extract
+import           JsonToType.Util  ()
 
 --import           Debug.Trace -- DEBUG
 trace _ x = x

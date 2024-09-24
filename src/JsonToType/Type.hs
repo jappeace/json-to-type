@@ -4,7 +4,7 @@
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE OverloadedStrings     #-}
 -- | Union types describing JSON objects, and operations for querying these types.
-module Data.Aeson.AutoType.Type(typeSize,
+module JsonToType.Type(typeSize,
                                 Dict(..), keys, get, withDict,
                                 Type(..), emptyType,
                                 isSimple, isArray, isObject, typeAsSet,

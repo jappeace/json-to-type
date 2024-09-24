@@ -1,5 +1,5 @@
 -- | Formatting tools for code generation.
-module Data.Aeson.AutoType.Format(capitalize, uncapitalize) where
+module JsonToType.Format(capitalize, uncapitalize) where
 
 import Data.Text(Text)
 import qualified Data.Text as Text

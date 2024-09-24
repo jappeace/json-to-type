@@ -3,6 +3,7 @@ Changelog
     4.0.0  Mar 2022
         * fork from json-to-type, merge json-alt. rename json-to-type.
           delete stack. add flake.
+          Set module paths according to package name.
 
       
     3.1.3  Mar 2022
@@ -14,7 +15,7 @@ Changelog
           refer to thing that is not a type.
 
     3.1.1  Apr 2020
-        * Expose Data.Aeson.AutoType.Nested
+        * Expose JsonToType.Nested
 
     3.1.0  Apr 2020
         * New, experimental interface for nesting
@@ -41,7 +42,7 @@ Changelog
         * Hide all API beside Alternative (as unused outside generator).
         * Add fixity for alt (#20)
         * Use `eitherDecode` instead of `decode` to get better error messages.
-        * Split Data.Aeson.AutoType.Alternative to `json-alt`.
+        * Split JsonToType.Alternative to `json-alt`.
 
     2.0.2  Nov 2018
         * Clean up the tests.
@@ -201,12 +202,12 @@ Changelog
 
     0.2.5.0  Nov 2014
 
-        * Nicer union type syntax in Data.Aeson.AutoType.Alternative.
+        * Nicer union type syntax in JsonToType.Alternative.
 
     0.2.4.0  Nov 2014
 
         * To assure proper treatment of unions,
-          I make them with Data.Aeson.AutoType.Alternative type instead of Either.
+          I make them with JsonToType.Alternative type instead of Either.
 
     0.2.3.0  Nov 2014
 
