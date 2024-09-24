@@ -97,6 +97,8 @@ library
       Data.Aeson.AutoType.CodeGen.Common
       Data.Aeson.AutoType.Plugin.Subtype
       Paths_json_to_type
+  autogen-modules:
+      Paths_json_to_type
   hs-source-dirs:
       src
   other-extensions:
@@ -139,6 +141,8 @@ executable json-to-type
   other-modules:
       CommonCLI
       Paths_json_to_type
+  autogen-modules:
+      Paths_json_to_type
   other-extensions:
       TemplateHaskell
       ScopedTypeVariables
@@ -176,6 +180,8 @@ test-suite json-to-type-examples
   main-is: TestExamples.hs
   other-modules:
       CommonCLI
+      Paths_json_to_type
+  autogen-modules:
       Paths_json_to_type
   hs-source-dirs:
       test
@@ -222,6 +228,8 @@ test-suite json-to-type-gen-test
   other-modules:
       CommonCLI
       Paths_json_to_type
+  autogen-modules:
+      Paths_json_to_type
   other-extensions:
       TemplateHaskell
       ScopedTypeVariables
@@ -261,6 +269,8 @@ test-suite json-to-type-qc-test
   main-is: TestQC.hs
   other-modules:
       CommonCLI
+      Paths_json_to_type
+  autogen-modules:
       Paths_json_to_type
   hs-source-dirs:
       test/qc
