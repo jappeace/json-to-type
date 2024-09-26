@@ -15,7 +15,7 @@ import           System.IO                 (stdin, stderr, stdout, IOMode(..))
 import           System.FilePath           (splitExtension, (<.>), (</>))
 import           System.Directory          (removeFile, createDirectoryIfMissing)
 import           System.Process            (system)
-import           Control.Monad             (forM_, forM, when)
+import           Control.Monad             (forM_, forM, when, filterM)
 import           Control.Exception         (assert)
 import qualified Data.ByteString.Lazy.Char8 as BSL
 import qualified Data.HashMap.Strict        as Map
